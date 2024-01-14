@@ -1,10 +1,10 @@
 import configparser
+
 import pandas as pd
 import sqlalchemy
 from sqlalchemy import text
 
 CONFIG_FILE = "pipeline.conf"
-
 
 parser = configparser.ConfigParser()
 parser.read(CONFIG_FILE)
@@ -79,5 +79,3 @@ for k, v in tables.items():
     # Export
     # df = pd.read_sql(f"select * from {k}", engine)
     # df.to_csv(f"breakfast_{k}_export.csv", index=False)
-
-
